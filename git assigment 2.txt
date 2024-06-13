@@ -1,0 +1,288 @@
+
+1)What is Git and why is it used?
+ans:-
+--------
+Git is a distributed version control system (VCS)
+Git is a tool that helps track changes to files over time. It allows multiple people to
+ work on a project simultaneously without interfering with each other's work.
+Git used:-
+----------
+1)Collaboration :-
+--------------------
+Git makes it easy for multiple people to collaborate on the same project. 
+Changes can be merged from different branches, and conflicts can be resolved in a systematic way.
+
+2)History and Backup:-
+3)Branching and Merging:
+4)Staging Area:
+5)Performance:
+6)Flexibility
+7)Open Source:
+
+2)Explain the difference between Git and GitHub.
+ans:-
+------
+Git                                                                                                                                                      GitHub
+------                                                                                                                                               -------------------
+1)Git is a distributed version control system (VCS).                                                 1)  GitHub is a web-based platform and hosting service for Git repositories.
+2)Functionality: Git tracks changes to files, allows multiple                                 2)GitHub provides a user-friendly web interface to manage Git repositories. 
+developers tocollaborate on the same project, and manages project history      GitHub: A service for hosting Git repositories and adding collaboration features on top of Git.
+3)Location:Git: Operates locally on your computer.                                              3)GitHub: Operates remotely on GitHub’s servers and provides a web interface.
+4)Primary Use:Git: Version control, managing project history, branching,       4) GitHub: Collaboration, sharing repositories, managing issues, hosting, and project visibility                                                                                                                                          and merging   
+3)How do you install Git on your machine?     
+ans:-
+----
+To download the Git installer, visit the Git's official site and go to download page.
+ The link for the download page is https://git-scm.com/downloads.
+
+4)How do you configure your username and email in Git?
+ans:-
+------
+click on git bash to cerate . stoerd in local c drive with .git it is hidden file click on hidden file we can se that file
+git config --global user.name "saikrishna"
+git config --global user.email "saikrishna.nelluri@greemus.com"
+
+5)What is a repository in Git?
+ans:-
+----
+A repository consists of a list named .git, where git holds all of its metadata for the catalog.
+ The content of the .git file is private to Git.
+
+6)How do you create a new Git repository?
+ans :-
+----
+A new repository in git to cerate
+local repo:-
+-------------
+git init
+git  add <file name,  .    ,   *  , >working file to move  
+git commit -m "commite the file in staging driector"
+git status <to check working file in red colour , staging colour green >
+git log <to check our local repo>
+reomte repo:-
+----------------
+git init 
+git add .*<file>
+git commit -m "file "
+git branch -M main
+git clone or remote add origin https://github.com/user/repo.git <pushing the code local machine to the git hub or big bucket repo file >
+git push origin main
+ 
+git branch <branch name nuvv life>
+git show 
+git ls
+git check out branch 
+
+7)How do you clone a repository from GitHub?
+ans:-
+-----
+Navigate to the repository on GitHub you want to clone
+git clone https://github.com/username/repository.git
+cd repository.git <here clone repo . git direct to cerate your local repo pull thre our local mechina to cerat or update ,>
+git push origin main
+ls 
+
+8)What is the purpose of the .gitignore file?
+ans:-
+-----
+The .gitignore file in a Git repository specifies which files and directories Git should ignore and not track.
+ This file is crucial for keeping unnecessary files out of your Git history and preventing them from being committed to the repository
+Exclude Unnecessary Files:
+Improve Performance:
+Enhance Security:
+Maintain Clean Repository:
+
+9)How do you check the status of your working directory in Git?
+ans:-
+---
+To check the status of your working directory in Git, you use the git status command. 
+Modified files that are not yet staged for commit.
+Files that have been staged and are ready to be committed.
+Untracked files that are not being tracked by Git.
+Any relevant information about the current branch and its relation to the remote repository.
+
+10)How do you add files to the staging area in Git?
+ans:-
+------
+To add files to the staging area in Git, you use the git add command. 
+The staging area, also known as the index, is where you prepare changes before committing them to the repository. 
+git init
+git add file1,feli2,file3
+git  add .*
+touch file1,flie2,
+git commit -m "files added here
+
+11)Explain the concept of commits in Git.
+Commit: A commit is a record of changes in your repository, capturing the state of the project at a specific point in time.
+Unique Identifier: Each commit is uniquely identified by a SHA-1 hash.
+Metadata: Commits include metadata like author, date, and a commit message.
+Parent Commits: Commits link to their parent(s), forming a history of changes.
+
+11)How do you create a new commit in Git?
+ans:-
+------
+Modify your files: Make changes to the files in your working directory.
+Check the status: Use git status to see which files have changed.
+Stage the changes: Use git add to stage the changes you want to commit.
+Commit the changes: Use git commit -m "commit message" to create a new commit with your staged changes.
+
+12)What is the purpose of the git log command?
+ans:-
+-----
+The git log command is used to view the history of commits in a Git repository.
+Commit hash: A unique SHA-1 identifier for the commit.
+Author: The name and email of the person who made the commit.
+Date: The date and time when the commit was made.
+Commit message: A description of the changes made in the commi
+
+13)How do you view the history of commits in a repository?
+ans:-
+------
+To view the history of commits in a Git repository, you use the git log comma
+
+14)How do you view the changes made in a commit?
+ans:-
+------
+To view the changes made in a commit, you can use various methods depending on the tools and interfaces you are using. 
+git show
+git log
+git status
+git diff commit
+
+15)What is branching in Git and why is it useful?
+ans:-
+-----
+Branching in Git is a feature that allows you to create separate lines of development within a repository.
+The default branch name in Git is main or master (depending on the repository's initial setup), but you can create new branches to work on 
+ any other tasks independently of the main branch.
+
+16)How do you create a new branch in Git?
+ans:-
+-----
+Creating a Branch
+To create a new branch, you use the git branch command:
+To switch to an existing branch, you use the git checkout or git switch command:
+Creating and Switching in One Step
+git checkout -b feature-branch
+or
+git switch -c feature-branch
+Merging Branches
+git checkout main
+git merge feature-branc
+Deleting a Branch
+git branch -d feature-branch
+
+17)How do you switch between branches in Git?
+ans:-
+------
+To switch between branches in Git, you can use the git checkout or git switch command followed by the name of the branch you want to switch to
+
+18)What is the difference between git merge and git rebase?
+ans:-
+------
+Merge: Integrates changes by creating a merge commit, preserving the branching history.
+Rebase: Integrates changes by applying commits on top of another branch, resulting in a linear commit history without merge commits.
+
+git merge:-
+-------------
+Simple and straightforward to use.
+Preserves the original branching structure.
+advantages:-(pors)
+---------------
+Simple and straightforward to use.
+Preserves the original branching structure.
+Disadvantages:-(cors)
+------------------------
+Can clutter the commit history with merge commits, especially in repositories with frequent merges.
+Can lead to a non-linear history, which some developers find harder to understand.
+git rebase:-
+-------------
+Creates a cleaner commit history, making it easier to review and understand changes.
+Helps avoid unnecessary merge commits, reducing clutter in the commit history.
+advantages (pors):-
+----------------------
+Creates a cleaner commit history, making it easier to review and understand changes.
+Helps avoid unnecessary merge commits, reducing clutter in the commit history.
+Disadvantages(cors):-
+------------------
+Rewriting history can cause complications if the rebased commits have already been pushed to a shared repository, as it alters the commit history.
+May require resolving conflicts at the time of rebase, which can be more complex compared to resolving conflicts during a merge.
+19)How do you resolve merge conflicts in Git?
+ans:-
+-----
+Resolving merge conflicts in Git involves a few steps to identify and fix the conflicting changes.
+When you try to merge branches and Git encounters conflicts, it will stop the merge process and mark the conflicts in the files.
+git merge <branch- name>
+<<<<<<< HEAD: Indicates the start of the changes in the current branch.
+=======: Separates the conflicting changes.
+>>>>>>> branch-name: Indicates the end of the changes from the other branch.
+20)What is the purpose of the git stash command?
+ans:-
+------
+GIT stash takes the present state of the working file and index and puts in on the stack for next and gives you back a clean working file.
+ So in case if you are in the middle of object and require to jump over to the other task, and at the same time you don't want to lose your current edits, you can use GIT stash.
+21)How do you apply stashed changes in Git?
+ans:-
+------
+git stash apply: Reapplies stashed changes without removing them from the stash list.
+git stash pop: Reapplies stashed changes and removes them from the stash list.
+
+
+
+
+
+
+
+
+
+
+
+0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
